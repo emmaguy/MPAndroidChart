@@ -761,7 +761,7 @@ public abstract class Chart extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
-        if (mListener == null)
+        if (mListener == null || mDataNotSet)
             return false;
 
         // check if touch gestures are enabled
